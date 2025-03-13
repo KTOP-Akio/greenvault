@@ -12,8 +12,8 @@ import ThemeToggleButton from './ThemeToggleButton';
 import { useTheme } from '../../hooks/useTheme';
 import LanguageSelector from './LanguageSelector';
 import CurrencySelector from './CurrencySelector';
-import LogoLight from '../../../assets/logo_light.png';
-import LogoDark from '../../../assets/logo_dark.png';
+import LightLogo from '../logo/LightLogo';
+import DarkLogo from '../logo/DarkLogo';
 
 const Sidebar = () => {
     const location = useLocation();
@@ -24,8 +24,8 @@ const Sidebar = () => {
     return (
         <div className="bg-white dark:bg-[#1C382E] text-[#070D0A] dark:text-[#ECFFF5] h-screen w-72 fixed left-0 top-0 flex flex-col justify-between">
             <div>
-                <div className="flex items-center justify-center mt-4 mb-8">
-                    {isDark ? <img src={LogoDark} alt='Dark Logo' /> : <img src={LogoLight} alt='Light Logo' />}
+                <div className="flex items-center justify-center mt-6 mb-8">
+                    {isDark ? <DarkLogo /> : <LightLogo />}
                 </div>
                 <nav>
                     <ul className="space-y-4 text-lg leading-10">
