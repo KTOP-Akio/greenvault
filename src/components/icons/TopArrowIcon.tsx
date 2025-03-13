@@ -1,10 +1,10 @@
-interface ChevronIconProps {
+interface TopArrowIconProps {
     className?: string;
     width?: number | string;
     height?: number | string;
 }
 
-const ChevronIcon: React.FC<ChevronIconProps> = ({ 
+const TopArrowIcon: React.FC<TopArrowIconProps> = ({ 
     className = '', 
     width = 24, 
     height = 17 
@@ -27,4 +27,4 @@ const ChevronIcon: React.FC<ChevronIconProps> = ({
     );
 };
 
-export default ChevronIcon; 
+export default TopArrowIcon;

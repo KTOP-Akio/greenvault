@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-    OverviewIcon, 
-    DepositIcon, 
-    WithdrawalIcon, 
+import {
+    OverviewIcon,
+    DepositIcon,
+    WithdrawalIcon,
     NotificationIcon,
     DocumentIcon,
-    ContactIcon 
+    ContactIcon
 } from '../icons';
 import ThemeToggleButton from './ThemeToggleButton';
 import { useTheme } from '../../hooks/useTheme';
@@ -32,11 +32,10 @@ const Sidebar = () => {
                         <li>
                             <Link
                                 to="/dashboard"
-                                className={`flex items-center pl-4 border-l-[3px] ${
-                                    location.pathname === '/dashboard' 
-                                        ? 'text-[#35E032] border-[#35E032]' 
-                                        : 'border-transparent hover:text-[#35E032] hover:border-[#35E032]'
-                                }`}
+                                className={`flex items-center pl-4 border-l-[3px] ${location.pathname === '/dashboard'
+                                    ? 'text-[#35E032] border-[#35E032]'
+                                    : 'border-transparent hover:text-[#35E032]'
+                                    }`}
                             >
                                 <OverviewIcon className="mr-6" color="currentColor" />
                                 <span>Overview</span>
@@ -45,11 +44,10 @@ const Sidebar = () => {
                         <li>
                             <Link
                                 to="/dashboard/deposit"
-                                className={`flex items-center pl-4 border-l-[3px] ${
-                                    location.pathname === '/dashboard/deposit' 
-                                        ? 'text-[#35E032] border-[#35E032]' 
-                                        : 'border-transparent hover:text-[#35E032] hover:border-[#35E032]'
-                                }`}
+                                className={`flex items-center pl-4 border-l-[3px] ${location.pathname === '/dashboard/deposit'
+                                    ? 'text-[#35E032] border-[#35E032]'
+                                    : 'border-transparent hover:text-[#35E032]'
+                                    }`}
                             >
                                 <DepositIcon className="mr-6" color="currentColor" />
                                 <span>Deposit</span>
@@ -58,11 +56,10 @@ const Sidebar = () => {
                         <li>
                             <Link
                                 to="/dashboard/withdrawal"
-                                className={`flex items-center pl-4 border-l-[3px] ${
-                                    location.pathname === '/dashboard/withdrawal' 
-                                        ? 'text-[#35E032] border-[#35E032]' 
-                                        : 'border-transparent hover:text-[#35E032] hover:border-[#35E032]'
-                                }`}
+                                className={`flex items-center pl-4 border-l-[3px] ${location.pathname === '/dashboard/withdrawal'
+                                    ? 'text-[#35E032] border-[#35E032]'
+                                    : 'border-transparent hover:text-[#35E032]'
+                                    }`}
                             >
                                 <WithdrawalIcon className="mr-6" color="currentColor" />
                                 <span>Withdrawal</span>
@@ -71,11 +68,10 @@ const Sidebar = () => {
                         <li>
                             <Link
                                 to="/dashboard/notifications"
-                                className={`flex items-center pl-4 border-l-[3px] ${
-                                    location.pathname === '/dashboard/notifications' 
-                                        ? 'text-[#35E032] border-[#35E032]' 
-                                        : 'border-transparent hover:text-[#35E032] hover:border-[#35E032]'
-                                }`}
+                                className={`flex items-center pl-4 border-l-[3px] ${location.pathname === '/dashboard/notifications'
+                                    ? 'text-[#35E032] border-[#35E032]'
+                                    : 'border-transparent hover:text-[#35E032]'
+                                    }`}
                             >
                                 <NotificationIcon className="mr-6" color="currentColor" />
                                 <span>Notifications</span>
@@ -84,11 +80,10 @@ const Sidebar = () => {
                         <li>
                             <Link
                                 to="/dashboard/documents"
-                                className={`flex items-center pl-4 border-l-[3px] ${
-                                    location.pathname === '/dashboard/documents' 
-                                        ? 'text-[#35E032] border-[#35E032]' 
-                                        : 'border-transparent hover:text-[#35E032] hover:border-[#35E032]'
-                                }`}
+                                className={`flex items-center pl-4 border-l-[3px] ${location.pathname === '/dashboard/documents'
+                                    ? 'text-[#35E032] border-[#35E032]'
+                                    : 'border-transparent hover:text-[#35E032]'
+                                    }`}
                             >
                                 <DocumentIcon className="mr-6" color="currentColor" />
                                 <span>Documents</span>
@@ -97,11 +92,10 @@ const Sidebar = () => {
                         <li>
                             <Link
                                 to="/dashboard/contact-us"
-                                className={`flex items-center pl-4 border-l-[3px] ${
-                                    location.pathname === '/dashboard/contact-us' 
-                                        ? 'text-[#35E032] border-[#35E032]' 
-                                        : 'border-transparent hover:text-[#35E032] hover:border-[#35E032]'
-                                }`}
+                                className={`flex items-center pl-4 border-l-[3px] ${location.pathname === '/dashboard/contact-us'
+                                    ? 'text-[#35E032] border-[#35E032]'
+                                    : 'border-transparent hover:text-[#35E032]'
+                                    }`}
                             >
                                 <ContactIcon className="mr-6" color="currentColor" />
                                 <span>Contact Us</span>
@@ -111,12 +105,12 @@ const Sidebar = () => {
                 </nav>
             </div>
             <div className="text-center text-sm py-4 flex flex-col items-center justify-center gap-4">
-                <div className="flex w-56 justify-between mb-2">
-                    <LanguageSelector 
+                <div className="flex w-48 justify-between mb-2">
+                    <LanguageSelector
                         currentLanguage={currentLanguage}
                         onLanguageChange={setCurrentLanguage}
                     />
-                    <CurrencySelector 
+                    <CurrencySelector
                         currentCurrency={currentCurrency}
                         onCurrencyChange={setCurrentCurrency}
                     />

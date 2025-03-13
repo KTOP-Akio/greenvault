@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import ChevronIcon from '../icons/ChevronIcon';
+import TopArrowIcon from '../icons/TopArrowIcon';
 
 interface Language {
     code: string;
     name: string;
-    flag: string;
 }
 
 const languages: Language[] = [
-    { code: 'en', name: 'English', flag: '🇬🇧' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'en', name: 'English' },
+    { code: 'es', name: 'Español' },
+    { code: 'fr', name: 'Français' },
 ];
 
 interface LanguageSelectorProps {
@@ -28,11 +27,10 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ currentLanguage, on
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center gap-2 text-lg"
             >
-                <span>{currentLang.flag}</span>
                 <span>{currentLang.name}</span>
-                <ChevronIcon className={`transform transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                <TopArrowIcon className={`transform transition-transform ${isOpen ? 'rotate-180' : ''}`} />
             </button>
-            
+
             {isOpen && (
                 <div className="absolute bottom-full left-0 mb-1 bg-white dark:bg-[#14241B] rounded-lg shadow-lg overflow-hidden z-50">
                     {languages.map((lang) => (
@@ -45,7 +43,6 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ currentLanguage, on
                             className={`flex items-center gap-2 w-full px-4 py-2 text-lg hover:bg-[#ECFFF5] dark:hover:bg-[#2A2A2A] text-left
                                 ${currentLanguage === lang.code ? 'text-[#35E032]' : ''}`}
                         >
-                            <span>{lang.flag}</span>
                             <span>{lang.name}</span>
                         </button>
                     ))}
