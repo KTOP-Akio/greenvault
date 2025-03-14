@@ -9,7 +9,7 @@ const Dashboard = () => {
       <Sidebar />
       <main className="bg-[#ECFFF5] dark:bg-[#14241B] text-[#070D0A] dark:text-[#ECFFF5] ml-72 w-full h-screen">
         <Navbar />
-        <div className="p-4">
+        <div className="pl-[70px] pt-[20px]">
           <Outlet />
         </div>
       </main>
