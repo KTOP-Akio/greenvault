@@ -8,7 +8,7 @@ const RiskBar = () => {
                     MINIMUM RISKS
                 </span>
             </div>
-            <div className="absolute w-[5px] h-[60px] bg-[#ECFFF5] rounded-[5px] top-[-10px] left-[50%]"></div>
+            <div className="absolute w-[5px] h-[60px] bg-[#ECFFF5] shadow rounded-[5px] top-[-10px] left-[50%]"></div>
         </div>
     )
 }
