@@ -4,6 +4,7 @@ import DateDropdown from '../components/dashboard/overview/DateDropdown';
 import DonatChart from '../components/dashboard/overview/DonatChart';
 import Operation from '../components/dashboard/overview/Operation';
 import AssetsOverview from '../components/dashboard/overview/AssetsOverview';
+import RiskBar from '../components/dashboard/overview/RiskBar';
 
 const Overview = () => {
   const [currentDate, setCurrentDate] = useState('week');
@@ -82,6 +83,9 @@ const Overview = () => {
       <div className='flex gap-12'>
         <Operation operations={operations} />
         <AssetsOverview assets={assets} />
+      </div>
+      <div className='flex items-center justify-center p-[20px] rounded-[14px] h-[80px] w-full bg-white dark:bg-[#1C382E] shadow mb-[30px]'>
+        <RiskBar />
       </div>
     </div>
   );
