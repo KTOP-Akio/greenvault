@@ -38,25 +38,25 @@ const AssetsOverview = ({ assets }: AssetsOverviewProps) => {
             <table className="min-w-full table-auto">
                 <thead>
                     <tr>
-                        <th onClick={() => requestSort('asset')} className="cursor-pointer text-left px-4 py-2">
+                        <th onClick={() => requestSort('asset')} className="cursor-pointer text-left pr-4 py-2">
                             <span className="flex items-center gap-2">
                                 Asset
                                 <ArrowIcon />
                             </span>
                         </th>
-                        <th onClick={() => requestSort('balance')} className="cursor-pointer text-left px-4 py-2">
+                        <th onClick={() => requestSort('balance')} className="cursor-pointer text-left pr-4 py-2">
                             <span className="flex items-center gap-2">
                                 Balance
                                 <ArrowIcon />
                             </span>
                         </th>
-                        <th onClick={() => requestSort('priceChange')} className="cursor-pointer text-left px-4 py-2">
+                        <th onClick={() => requestSort('priceChange')} className="cursor-pointer text-left pr-4 py-2">
                             <span className="flex items-center gap-2">
                                 Price Change
                                 <ArrowIcon />
                             </span>
                         </th>
-                        <th onClick={() => requestSort('allocation')} className="cursor-pointer text-left px-4 py-2">
+                        <th onClick={() => requestSort('allocation')} className="cursor-pointer text-left pr-4 py-2">
                             <span className="flex items-center gap-2">
                                 Allocation
                                 <ArrowIcon />
@@ -67,13 +67,13 @@ const AssetsOverview = ({ assets }: AssetsOverviewProps) => {
                 <tbody>
                     {sortedAssets.map((asset, index) => (
                         <tr key={index}>
-                            <td className="px-4 py-2 flex items-center gap-1">
+                            <td className="pr-4 py-2 flex items-center gap-1">
                                 <span className='w-[14px] h-[14px] rounded-[7px]' style={{ backgroundColor: asset.color }}></span>
                                 {asset.asset}
                             </td>
-                            <td className="px-4 py-2">${asset.balance}</td>
-                            <td className="px-4 py-2">{asset.priceChange > 0 ? "+" : ""}{asset.priceChange.toFixed(2)}%</td>
-                            <td className="px-4 py-2">{asset.allocation}%</td>
+                            <td className="pr-4 py-2">${asset.balance}</td>
+                            <td className="pr-4 py-2">{asset.priceChange > 0 ? "+" : ""}{asset.priceChange.toFixed(2)}%</td>
+                            <td className="pr-4 py-2">{asset.allocation}%</td>
                         </tr>
                     ))}
                 </tbody>
