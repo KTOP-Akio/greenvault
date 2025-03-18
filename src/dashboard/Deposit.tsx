@@ -4,7 +4,7 @@ import DepositCryptoCard from '../components/dashboard/deposit/DepositCryptoCard
 
 const Deposit = () => {
   return (
-    <div className='flex gap-12 w-full'>
+    <div className='flex gap-12 w-full justify-center pb-12'>
       <DepositBankCard />
       <DepositCryptoCard />
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const DepositCryptoCard = () => {
     return (
-        <div className="w-full bg-white dark:bg-[#1C382E] shadow rounded-[14px] p-[20px] flex flex-col gap-[20px]">
+        <div className="w-[600px] bg-white dark:bg-[#1C382E] shadow rounded-[14px] p-[20px] flex flex-col gap-[20px]">
             <p className="text-lg font-bold">Deposit from crypto wallet</p>
             <div className="w-full flex flex-col gap-[20px] blur-md">
                 <div className="w-full bg-[#ECFFF5] dark:bg-[#14241B] rounded-[7px] flex flex-col px-[20px] py-[10px]">
@@ -69,7 +69,7 @@ const DepositCryptoCard = () => {
                         </div>
                     </div>
                     <div className="mt-[76px] ml-[-20px] mr-[13px] flex gap-[10px] items-center">
-                        <div className="w-[10px] h-[65px] bg-[#35E032] rounded-tr-[14px] rounded-bl-[7px]"></div>
+                        <div className="w-[15px] h-[90px] bg-[#35E032] rounded-tr-[14px] rounded-bl-[10px]"></div>
                         <p className="text-md">
                             Before investing, carefully consider all risks because by clicking the button below you agree that only you are responsible for all financial losses incurred
                         </p>
