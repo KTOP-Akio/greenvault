@@ -1,13 +1,12 @@
 import React from 'react';
+import DepositBankCard from '../components/dashboard/deposit/DepositBankCard';
+import DepositCryptoCard from '../components/dashboard/deposit/DepositCryptoCard';
 
 const Deposit = () => {
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Deposit</h1>
-      <div className="bg-white dark:bg-[#1C382E] rounded-lg shadow p-4">
-        {/* Add your Deposit content here */}
-        <p>Deposit dashboard content</p>
-      </div>
+    <div className='flex gap-12 w-full'>
+      <DepositBankCard />
+      <DepositCryptoCard />
     </div>
   );
 };
